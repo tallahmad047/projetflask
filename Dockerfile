@@ -13,13 +13,8 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
 
-
-
-# Définissez la variable d'environnement FLASK_APP pour indiquer le nom du fichier d'application Flask
-ENV FLASK_APP=myapp.py
-
-# Lancez l'application Flask lorsque le conteneur démarre
-CMD ["flask", "run", "myapp"]
+# Define environment variable
+ENV NAME World
 
 # Run app.py when the container launches
-#CMD ["python3", "myapp.py"]
+CMD ["python", "myapp.py"]
